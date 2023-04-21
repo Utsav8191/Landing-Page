@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resumepuppy</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="nav.css">
+  <script defer src="https://kit.fontawesome.com/d13d4de4a3.js" crossorigin="anonymous"></script>
+  <script defer src="index.js"></script>
+</head>
+<body>
+  <nav>
+    <div class="container">      
+      <a href="#">
+        <div class="logo-container">
+          <img src="assets/logo.png" alt="brand-logo">
+        </div>
+      </a>
+      
+      <div class="right-section">
+        <ul class="nav-list">
+          <li class="nav-list-item">
+            <button class="features-btn" onclick="handleclick()">
+              <span class="feature-text">Features
+                <i class="fa-solid fa-caret-down"></i>
+              </span>
+          <!-- Dropdown -->
+          <div class="dropdown-box">
+            <ul class="dropdown-list">
+              <li class="dropdown-item">
+                <a href="#">Keywords Analyzer</a>
+              </li>
+              <li class="dropdown-item">
+                <a href="#">Resume Analysis</a>
+              </li>
+              <li class="dropdown-item">
+                <a href="#">Latex Resume</a>
+              </li>
+            </ul>
+          </div>
+            </button>
+          </li>
+          <!-------->
+          <li class="nav-list-item">
+            <a href="#">Learn</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="#">Pricing</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="#" id="sign-in-btn"><span class="sign-in-txt">Sign in</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Section -->
+  <main>
+    <div class="Section-container first-section">
+      <div class="banner-container">
+        <div class="banner-content">
+          <h1>
+            Land your dream job interview
+          </h1>
+          <div class="content-text">
+            <p>Only a few resumes get to the hiring manager. Make yours tell the right story.</p>
+            <p><strong>Trusted by 100,000+ Professionals & Students. </strong> 🚀</p>
+          </div>
+          <button class="build-btn">Build My Resume</button>
+          <p class="info-txt">15,442 ATS-friendly resumes built in December 2022</p>
+        </div>
+        <div class="banner-image">
+          <img src="assets/firstSection-image.png" alt="banner-Image">
+        </div>
+      </div>
+    </div>
+
+    <div class="Section-container second-section">
+      <div class="title-text-box">
+        <h2>Get Hired Faster</h2>
+        <div class="title-content-box">
+          <p>Build a resume that passes the ATS (Applicant Tracking System) while impressing both the recruiters and hiring managers.</p>
+        </div>        
+      </div>
+      <div class="tab-container">
+        <div class="btn-list">
+          <ul>
+            <li class="tab"><button onclick="atsKeyword()" class="ats-keyword tab-btn tab-btn-active">ATS KEYWORDS</button></li>
+            <li class="tab"><button onclick="resumeAnalysis()" class="resume-analysis tab-btn">RESUME ANALYSIS</button></li>
+            <li class="tab"><button onclick="smartSuggestions()" class="smart-suggestions tab-btn">SMART SUGGESTIONS</button></li>
+          </ul>
+        </div>
+        <div class="tab-item-container">
+          <ul class="tab-item-list">
+            <li id="tab-item1" class="tab-item">
+              <div class="tab-image-container">
+                <img src="assets/tab-item-1.png" alt="Tab-Image">
+              </div>
+              <div class="text-container">
+                <h2>Target jobs by quickly picking relevant keywords</h2>
+                <p>Generate a new resume with all the relevant keywords in just a few steps. Let us do the heavy lifting while you prepare for interviews.</p>
+                <div class="watch-btn">
+                  <a href="#"><span class="watch-txt-btn">WATCH</span><span class="text">How to pick keywords?</span><span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
+                </div>
+              </div>
+            </li>
+            <li id="tab-item2" class="tab-item">
+              <div class="tab-image-container">
+                <img src="assets/tab-item-2.png" alt="">
+              </div>
+              <div class="text-container">
+                <h2>Pre-made experience points to build your resume faster</h2>
+                <p>Generate a new resume with all the relevant keywords in just a few steps. Let us do the heavy lifting while you prepare for interviews.</p>
+                <div class="watch-btn read-btn">
+                  <a href="#"><span class="watch-txt-btn">READ</span><span class="text">Learn more</span><span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
+                </div>
+              </div>
+            </li>
+            <li id="tab-item3" class="tab-item">
+              <div class="tab-image-container">
+                <img src="assets/tab-item-3.png" alt="Tab-Image">
+              </div>
+              <div class="text-container">
+                <h2>Pre-made experience points to build your resume faster</h2>
+                <p>Generate a new resume with all the relevant keywords in just a few steps. Let us do the heavy lifting while you prepare for interviews.</p>
+                <div class="watch-btn">
+                  <a href="#"><span class="watch-txt-btn">WATCH</span><span class="text">Don't know what to write?</span><span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>      
+    </div>
+    <div class="Section-container third-section">
+        <div class="features-container">
+          <div class="feature-content">
+            <h2>Resume template that stands out</h2>
+            <div class="feature-text-box">
+              <p>Building LaTeX resumes have never been easier. Make use of our rich-text editor and generate LaTeX resumes for every application.</p>
+            </div>
+          </div>
+          <div class="image-box">
+            <img src="assets/featuresImage.png" alt="Features-Image">
+          </div>          
+        </div>   
+    </div>
+
+    <div class="Section-container fourth-section">
+      <h2>Our Users Love Us ❤️</h2>
+      <div class="carousel-container">
+        <ul class="carousel-list">
+          <li class="carousel-item">
+            <div class="item-box">       
+              <img src="assets/user-image.png" alt="User">              
+              <p><strong>I started getting a lot of recuiter calls immediately&nbsp;</strong>after I started applying using a ResumePuppy resume. Turns out my previous resume was not being parsed properly by the ATS and I didn't even know it! ResumePuppy nicely walks you through the whole resume-building process. I just love this stunning simplicity 🙂</p>
+              <p>ARFAH, TPM @WAYMO</p>
+            </div>
+          </li>
+          <li class="carousel-item">
+            <div class="item-box">       
+              <img src="assets/user-image.png" alt="User">              
+              <p>ResumePuppy is a one-stop platform for building an ATS-friendly resume for FREE! Talk about semantics, content, format, and structure, and all of it is taken care of by the website’s fantastic design. The diverse resources that ResumePuppy provides to make an industry-ready resume are, by far, the best in the market. <strong>My resume started getting more attention, and i received x2 interview invites.</strong></p>
+              <p>AYUSHI SHRIVASTAVA, TPM @WAYMO</p>
+            </div>
+          </li>
+          <li class="carousel-item">
+            <div class="item-box">       
+              <img src="assets/user-image.png" alt="User">              
+              <p><strong>I started getting a lot of recuiter calls immediately&nbsp;</strong>after I started applying using a ResumePuppy resume. Turns out my previous resume was not being parsed properly by the ATS and I didn't even know it! ResumePuppy nicely walks you through the whole resume-building process. I just love this stunning simplicity 🙂</p>
+              <p>ARCHITHA HARINATH, SWE @WALLMART</p>
+            </div>
+          </li>
+          <li class="carousel-item">
+            <div class="item-box">       
+              <img src="assets/user-image.png" alt="User">              
+              <p><strong>I started getting a lot of recuiter calls immediately&nbsp;</strong>after I started applying using a ResumePuppy resume. Turns out my previous resume was not being parsed properly by the ATS and I didn't even know it! ResumePuppy nicely walks you through the whole resume-building process. I just love this stunning simplicity 🙂</p>
+              <p>JAYESH SANWAL, SCIENTIST @KLA</p>
+            </div>
+          </li>
+          <li class="carousel-item">
+            <div class="item-box">       
+              <img src="assets/user-image.png" alt="User">              
+              <p><strong>I started getting a lot of recuiter calls immediately&nbsp;</strong>after I started applying using a ResumePuppy resume. Turns out my previous resume was not being parsed properly by the ATS and I didn't even know it! ResumePuppy nicely walks you through the whole resume-building process. I just love this stunning simplicity 🙂</p>
+              <p>Arfah, TPM @WAYMO</p>
+            </div>
+          </li>
+        </ul>
+        <button class="carousel-btn" onclick="previous()" id="prev"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="carousel-btn" onclick="next()" id="next"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+    <div class="Section-container fifth-section">
+      <div class="clients-container">
+        <h2>Trusted by students from 100+ universities</h2>
+        <div class="client-list-box">
+          <ul class="client-list">
+            <li class="client-item">
+              <div class="client-image">
+                <img src="assets/stanford-bank.png" alt="Stanford">
+              </div>
+            </li>
+            <li class="client-item">
+              <div class="client-image">
+                <img src="assets/arizona-stateUniversity.png" alt="Stanford">
+              </div>
+            </li>
+            <li class="client-item">
+              <div class="client-image">
+                <img src="assets/bits-pilani.png" alt="Bits-pilani">
+              </div>
+            </li>
+            <li class="client-item">
+              <div class="client-image">
+                <img src="assets/purdue.png" alt="Purdue">
+              </div>
+            </li>
+            <li class="client-item">
+              <div class="client-image">
+                <img src="assets/MIT.png" alt="MIT">
+              </div>
+            </li>
+            <li class="client-item">
+              <div class="client-image">
+                <img src="assets/stanford-bank.png" alt="Stanford">
+              </div>
+            </li>
+            <li class="client-item">
+              <div class="client-image">
+                <img src="assets/UofDallas.png" alt="University">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="Section-container sixth-section">
+      <h2>Our Blog</h2>
+      <div class="blog-container">
+        <div class="blog-component">
+          <div class="card-image">
+            <img src="assets/card-component1.png" alt="">
+          </div>
+          <div class="card-content">
+            <h2>Create Professional Resumes Using LaTeX</h2>
+          </div>
+        </div>
+        <div class="blog-component">
+          <div class="card-image">
+            <img src="assets/card-component2.png" alt="">
+          </div>
+          <div class="card-content">
+            <h2>How To Write A Functional Resume in 2022?</h2>
+          </div>
+        </div>
+        <div class="blog-component">
+          <div class="card-image">
+            <img src="assets/card-component3.png" alt="">
+          </div>
+          <div class="card-content">
+            <h2>5 Tips For A Great New Grad Software Engineer Resume</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Section-container seventh-section">
+      <div class="freeTrial-container">
+        <h2>Get past ATS and into the hands of the people that matter</h2>
+        <p>Try ResumePuppy for free and join thousands of happy customers. No credit card required.</p>
+        <a href="#">Try for free</a>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-section">
+        <div class="top-container">
+          <div class="footer01 footer-item">
+            <ul>
+              <li><div class="footer-logo">
+                <img src="assets/logo.png" alt="Logo">
+              </div></li>
+              <li class="footer01-item2">All Rights Reserved</li>
+            </ul>
+          </div>
+          <div class="footer02 footer-item">
+            <ul>
+              <li class="footer02-item1">The Company</li>
+              <li class="footer02-item2"><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer03 footer-item">
+            <ul>
+              <li class="footer03-item1">The Platform</li>
+              <li class="footer03-item2"><a href="#">Features</a></li>
+              <li class="footer03-item3"><a href="#">Terms and Conditions</a></li>
+              <li class="footer03-item4"><a href="#">Privacy</a></li>
+            </ul>
+            
+          </div>
+          <div class="footer04 footer-item">
+            <ul>
+              <li class="footer04-item1">Connect</li>
+              <li class="footer04-item2">
+                <div class="linkedin">
+                  <img src="assets/linkedin.svg" alt="Linkedin">
+                </div>
+                <div class="facebook">
+                  <img src="assets/facebook.svg" alt="Facebook">
+                </div>
+                <div class="twitter">
+                  <img src="assets/twitter.svg" alt="Twitter">
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="bottom-container">
+          <div class="bottom-links">
+            <ul class="link-list">
+              <li class="link-item"><a href="#">support@resumepupy.com </a></li>
+              <li class="link-item"><a href="#">Privacy Policy</a></li>
+              <li class="link-item"><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
